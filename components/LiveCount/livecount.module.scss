@@ -1,0 +1,19 @@
+@import '../../styles/default.scss';
+
+.livecount {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $color-white;
+	text-align: right;
+	width: 80vw;
+}
+
+.sum {
+	font-size: calc(300px + 2vw);
+}
+
+.donator {
+	color: $color-light-green;
+}

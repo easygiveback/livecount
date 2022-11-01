@@ -1,0 +1,36 @@
+// colors
+$color-black: #020202;
+$color-white: #fff;
+
+$color-light-green: lightgreen;
+$color-dark-blue: #213139;
+$color-light-blue: #dcecf0;
+
+// transition
+$ease-cubic: 0.7s cubic-bezier(0.6, 0, 0.4, 1) 0s;
+
+// z-index
+$z-index-main-content: 10;
+$z-index-preview-sign: 15;
+$z-index-nav: 20;
+$z-index-burger: 30;
+
+// spaces & gaps
+$section-gap: calc(40px + 1vw);
+$section-gap-md: calc(150px + 3vw);
+$section-gap-lg: calc(200px + 1vw);
+
+// font sizes
+$font-size-5xl: 94px;
+$font-size-4xl: 67px;
+$font-size-3xl: 46px;
+$font-size-xxl: 38px;
+$font-size-xl: 32px;
+$font-size-lg: 26px;
+$font-size-md: 24px;
+$font-size-sm: 21px;
+$font-size-xs: 18px;
+$font-size-xxs: 16px;
+$font-size-3xs: 14px;
+$font-size-4xs: 12px;
+$font-size-5xs: 11px;

@@ -1,0 +1,7 @@
+// Use this file for exporting scss variables like color to use in JS
+@import './default.scss';
+
+:export {
+  colorBlack: $color-black;
+  colorWhite: $color-white;
+}

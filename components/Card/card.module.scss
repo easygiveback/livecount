@@ -1,0 +1,32 @@
+.card {
+	height: 300px;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 20px;
+	margin-bottom: calc(var(--bs-gutter-x));
+	display: flex;
+	flex-direction: row;
+}
+
+.logo {
+	flex: 0.3;
+}
+
+.content {
+	flex: 0.7;
+	padding: 0 20px;
+
+	h3 {
+		font-size: 24px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+}
+
+.separator {
+	height: 100%;
+	width: 1px;
+	background-color: #000;
+}

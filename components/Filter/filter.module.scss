@@ -1,0 +1,133 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+$box-shadow: 0 5px 10px rgba($color-black, 0.12);
+$box-shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
+
+.filter-global {
+	position: fixed;
+	background-color: $color-white;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transform: translateY(100%);
+	transition: transform 0.3s ease;
+	will-change: transform;
+	z-index: 1000;
+
+	@include md {
+		background-color: transparent;
+		max-width: 800px;
+		right: unset;
+		bottom: unset;
+		left: 50%;
+		padding-top: 10px;
+		transform: translateX(-50%);
+	}
+
+	&--mobile {
+		transform: translateY(0);
+	}
+}
+
+.filter {
+	margin-top: 10px;
+	position: relative;
+	height: 80px;
+	background-color: #fff;
+	border-radius: 40px;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid $color-light-blue;
+
+	@include md {
+		flex-direction: row;
+	}
+}
+
+.filter-navigation {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	li {
+		font-size: 12px;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+}
+
+.search-button {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	background-color: $color-dark-blue;
+	cursor: pointer;
+}
+
+.filter-item {
+	position: relative;
+	width: calc(100% / 3);
+	height: 100%;
+	border: 1px solid transparent;
+	border-radius: 40px;
+	padding: 20px;
+
+	&--active {
+		box-shadow: $box-shadow-hover;
+		border-color: rgba($color-black, 0.12);
+	}
+}
+
+.filter-fields {
+	position: relative;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	width: 120%;
+	padding: 2rem;
+	border-radius: 20px;
+	box-shadow: $box-shadow-hover;
+
+	@include md {
+		position: absolute;
+	}
+}
+
+.mobile-filter-button {
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 90px;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+	padding: 0 20px;
+	background-color: $color-white;
+	z-index: 1000;
+
+	p {
+		background-color: $color-dark-blue;
+		height: 60px;
+		width: 100%;
+		border-radius: 10px;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@include md {
+		display: none;
+	}
+}

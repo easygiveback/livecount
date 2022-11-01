@@ -1,0 +1,217 @@
+// breakpoints
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+	3xl: 1800px,
+);
+
+// gap used for spacing
+$gap: 10px;
+@function gap($factor) {
+	@return $gap * $factor;
+}
+
+@mixin breakpoint($px) {
+	@media only screen and (min-width: $px) {
+		@content;
+	}
+}
+
+// Mediaquery mixins
+@mixin xs() {
+	@media only screen and (min-width: map-get($grid-breakpoints, xs)) {
+		@content;
+	}
+}
+
+@mixin sm() {
+	@media only screen and (min-width: map-get($grid-breakpoints, sm)) {
+		@content;
+	}
+}
+
+@mixin md() {
+	@media only screen and (min-width: map-get($grid-breakpoints, md)) {
+		@content;
+	}
+}
+
+@mixin lg() {
+	@media only screen and (min-width: map-get($grid-breakpoints, lg)) {
+		@content;
+	}
+}
+
+@mixin xl() {
+	@media only screen and (min-width: map-get($grid-breakpoints, xl)) {
+		@content;
+	}
+}
+
+@mixin xxl() {
+	@media only screen and (min-width: map-get($grid-breakpoints, xxl)) {
+		@content;
+	}
+}
+
+@mixin xxxl() {
+	@media only screen and (min-width: map-get($grid-breakpoints, xxxl)) {
+		@content;
+	}
+}
+
+//
+// Typography mixins
+//
+@mixin type-4xs {
+	font-size: $font-size-4xs;
+	line-height: 1.2em;
+}
+
+@mixin type-3xs {
+	font-size: $font-size-3xs;
+	line-height: 1.3em;
+}
+
+@mixin type-xxs {
+	font-size: $font-size-xxs;
+	line-height: 1.4em;
+}
+
+@mixin type-xs {
+	font-size: $font-size-xs;
+	line-height: 1.4em;
+}
+
+@mixin type-sm {
+	font-size: $font-size-sm;
+	line-height: 1.4em;
+}
+
+@mixin type-md {
+	font-size: $font-size-md;
+	line-height: 1.4em;
+}
+
+@mixin type-lg {
+	font-size: $font-size-lg;
+	line-height: 1.3em;
+}
+
+@mixin type-xl {
+	font-size: $font-size-xl;
+	line-height: 1.2em;
+}
+
+@mixin type-xxl {
+	font-size: $font-size-xxl;
+	line-height: 1.2em;
+}
+
+@mixin type-3xl {
+	font-size: $font-size-3xl;
+	line-height: 1.1em;
+}
+
+@mixin type-4xl {
+	font-size: $font-size-4xl;
+	line-height: 1.1em;
+}
+
+@mixin type-5xl {
+	font-size: $font-size-5xl;
+	line-height: 1em;
+}
+
+// Typography styling
+@mixin typography-h1 {
+	@include type-xl;
+
+	@include md {
+		@include type-xxl;
+	}
+
+	@include lg {
+		@include type-3xl;
+	}
+
+	// @include xl {
+	// 	@include type-4xl;
+	// }
+}
+
+@mixin typography-h2 {
+	@include type-xl;
+
+	@include md {
+		@include type-xxl;
+	}
+
+	@include lg {
+		@include type-3xl;
+	}
+
+	// @include xl {
+	// 	@include type-4xl;
+	// }
+}
+
+@mixin typography-h3 {
+	@include type-lg;
+
+	@include md {
+		@include type-xl;
+	}
+
+	@include lg {
+		@include type-3xl;
+	}
+}
+
+@mixin typography-h4 {
+	@include type-md;
+
+	@include sm {
+		@include type-lg;
+	}
+
+	@include md {
+		@include type-xl;
+	}
+
+	@include lg {
+		@include type-xxl;
+	}
+}
+
+@mixin typography-h5 {
+	@include type-xs;
+
+	@include sm {
+		@include type-sm;
+	}
+
+	@include md {
+		@include type-md;
+	}
+
+	@include lg {
+		@include type-lg;
+	}
+}
+
+@mixin typography-p {
+	@include type-xxs;
+
+	@include sm {
+		@include type-xs;
+	}
+
+	@include xl {
+		@include type-sm;
+	}
+}

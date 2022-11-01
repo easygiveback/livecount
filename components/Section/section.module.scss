@@ -1,0 +1,26 @@
+@import '../../styles/default.scss';
+
+.section {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: calc($section-gap-md / 2);
+  z-index: $z-index-main-content;
+  opacity: 0;
+  transition: 0.4s ease all;
+
+  @include md {
+    padding-bottom: calc($section-gap-lg / 2);
+  }
+
+  &--t {
+    padding-top: calc($section-gap-md / 2);
+
+    @include md {
+      padding-top: calc($section-gap-lg / 2);
+    }
+  }
+
+  &--loaded {
+    opacity: 1;
+  }
+}

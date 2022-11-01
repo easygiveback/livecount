@@ -1,0 +1,6 @@
+@import './mixins.scss';
+
+// overwriting bootstrap variables
+$grid-gutter-width: gap(1.5) !default;
+
+@import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
